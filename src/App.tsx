@@ -1,33 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import BeamGridBackground from './components/lightswind/beam-grid-background'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BeamGridBackground 
+      gridSize={30}
+      gridColor="#d1d5db"
+      darkGridColor="#1f2937"
+      beamColor="#000000"
+      darkBeamColor="ffffff"
+      beamCount={10}
+      extraBeamCount={3}
+      beamThickness={3}
+      beamGlow
+      glowIntensity={50}
+      idleSpeed={1.15}
+      asBackground={true}
+      />
     </>
   )
 }
